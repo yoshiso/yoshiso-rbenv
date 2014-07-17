@@ -1,8 +1,8 @@
 
 
 default["rbenv"]["user"] = "vagrant"
-default["rbenv"]["git_url"] = "http://github.com/sstephenson/rbenv.git"
-default['rbenv']['rubybuild_git_url'] = "http://github.com/sstephenson/ruby-build.git"
+default["rbenv"]["git_url"] = "https://github.com/sstephenson/rbenv.git"
+default['rbenv']['rubybuild_git_url'] = "https://github.com/sstephenson/ruby-build.git"
 default["rbenv"]["install_pkgs"] = %w{
   gcc make zlib zlib-devel readline readline-devel openssl openssl-devel curl curl-devel
 }

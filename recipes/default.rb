@@ -32,6 +32,14 @@ git "#{home}/.rbenv" do
   action :sync
 end
 
+bash "rbenv plugin"   do
+  code "mkdir -p #{home}/.rbenv/plugins"
+  user node['rbenv']['user']
+  action :run
+  not_if { ::File.exists?("#{home}/.rbenv/plugins") }
+end
+
+
 git "#{home}/.rbenv/plugins/ruby-build" do
   repository node['rbenv']['rubybuild_git_url']
   user node['rbenv']['user']
